@@ -3,7 +3,459 @@
  <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cart</title>
+
+  <!-- BOOTSRAP -->
+  <link
+   rel="stylesheet"
+   href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+  />
+
+  <!-- FONT AWESOME -->
+  <link
+   rel="stylesheet"
+   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+  />
+
+  <link rel="stylesheet" href="src/css/index.scss" />
+  <script
+   data-main="./src/scripts/index.js"
+   src="./src/scripts/require.js"
+  ></script>
+  <script defer src="./src/scripts/index.js" type="module"></script>
+
+  <title>Sole And Stitch</title>
  </head>
- <body></body>
+ <body>
+  <!-- HEADER -->
+  <header id="sections" class="hidden">
+   <nav>
+    <h1>SoleandStitch</h1>
+
+    <ul>
+     <li><a class="nav_links" data-link="home" href="index.html">Home</a></li>
+     <li>
+      <a class="nav_links" data-link="products" href="product.html">Products</a>
+     </li>
+     <li><a class="nav_links" data-link="cart" href="cart.html">Carts</a></li>
+    </ul>
+
+    <button class="cta-btn">shop now</button>
+   </nav>
+
+   <div class="hero-container">
+    <div
+     id="carouselExampleSlidesOnly"
+     class="carousel slide"
+     data-bs-ride="carousel"
+     data-bs-interval="3000"
+    >
+     <div class="carousel-inner">
+      <div class="carousel-item active">
+       <img
+        src="/src/images/hero__image--1.jpg"
+        class="d-block w-100"
+        alt="Images"
+       />
+
+       <div class="overlay"><h1>Discover Comfort, Discover Confidence</h1></div>
+      </div>
+      <div class="carousel-item">
+       <img
+        src="/src/images/hero__image--2.jpg"
+        class="d-block w-100"
+        alt="Images"
+       />
+
+       <div class="overlay">
+        <h1>From Sneakers to Sandals - All in One Place</h1>
+       </div>
+      </div>
+      <div class="carousel-item">
+       <img
+        src="/src/images/hero__image--3.jpg"
+        class="d-block w-100"
+        alt="Images"
+       />
+
+       <div class="overlay">
+        <h1>Your Go-To Destination for Shirt Shopping</h1>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </header>
+
+  <!-- NEW ARRIVAL -->
+  <div class="arrival hidden" id="sections">
+   <h2>New Arrivals</h2>
+
+   <div class="arrival_collections">
+    <div class="arrival_collection">
+     <img src="/src/images/arrival_1.jpg" alt="Arrivals" />
+     <div class="arrival_collection--overview">
+      <span>NIKE</span>
+
+      <button>Add to cart</button>
+     </div>
+    </div>
+
+    <div class="arrival_collection">
+     <img src="/src/images/arrival_9.jpg" alt="Arrivals" />
+     <div class="arrival_collection--overview">
+      <span>Timberland</span>
+
+      <button>Add to cart</button>
+     </div>
+    </div>
+
+    <div class="arrival_collection">
+     <img src="/src/images/arrival_2.jpg" alt="Arrivals" />
+     <div class="arrival_collection--overview">
+      <span>UNDER ARMOUR</span>
+
+      <button>Add to cart</button>
+     </div>
+    </div>
+
+    <div class="arrival_collection">
+     <img src="/src/images/arrival_3.jpg" alt="Arrivals" />
+     <div class="arrival_collection--overview">
+      <span>FILA</span>
+
+      <button>Add to cart</button>
+     </div>
+    </div>
+
+    <div class="arrival_collection">
+     <img src="/src/images/arrival_4.jpg" alt="Arrivals" />
+     <div class="arrival_collection--overview">
+      <span>REEBOK</span>
+
+      <button>Add to cart</button>
+     </div>
+    </div>
+
+    <div class="arrival_collection">
+     <img src="/src/images/arrival_5.jpg" alt="Arrivals" />
+     <div class="arrival_collection--overview">
+      <span>ASICS</span>
+
+      <button>Add to cart</button>
+     </div>
+    </div>
+
+    <div class="arrival_collection">
+     <img src="/src/images/arrival_6.jpg" alt="Arrivals" />
+     <div class="arrival_collection--overview">
+      <span>CLARKS</span>
+
+      <button>Add to cart</button>
+     </div>
+    </div>
+
+    <div class="arrival_collection">
+     <img src="/src/images/arrival_7.jpg" alt="Arrivals" />
+     <div class="arrival_collection--overview">
+      <span>New Balance</span>
+
+      <button>Add to cart</button>
+     </div>
+    </div>
+
+    <div class="arrival_collection">
+     <img src="/src/images/arrival_8.jpg" alt="Arrivals" />
+     <div class="arrival_collection--overview">
+      <span>Adidas</span>
+
+      <button>Add to cart</button>
+     </div>
+    </div>
+   </div>
+  </div>
+
+  <!-- RECOMMENDATION -->
+  <div class="recommendation hidden" id="sections">
+   <h2>Recommendations</h2>
+
+   <div class="recommendation__box">
+    <div class="recommendation__box--text">
+     Designed for athletes on the move, the Z.N.E. collection provides comfort
+     and functionality without compromising on style, ideal for pre-game rituals
+     and post-game relaxation.
+    </div>
+    <div class="recommendation__box--image">
+     <img src="/src/images/recommendation--1.jpg" alt="Recommendation" />
+    </div>
+   </div>
+
+   <div class="recommendation__box">
+    <div class="recommendation__box--text">
+     Timeless and classic, Adidas Originals pays homage to the brand's heritage,
+     featuring iconic designs like the Superstar and Stan Smith.
+    </div>
+    <div class="recommendation__box--image">
+     <img src="/src/images/recommendation--2.jpg" alt="Recommendation" />
+    </div>
+   </div>
+  </div>
+
+  <!-- REVIEWS CAUROSEL -->
+  <div
+   id="sections"
+   id="carouselExampleIndicators"
+   class="carousel slide review hidden"
+  >
+   <div class="carousel-indicators">
+    <button
+     type="button"
+     data-bs-target="#carouselExampleIndicators"
+     data-bs-slide-to="0"
+     class="active"
+     aria-current="true"
+     aria-label="Slide 1"
+    ></button>
+    <button
+     type="button"
+     data-bs-target="#carouselExampleIndicators"
+     data-bs-slide-to="1"
+     aria-label="Slide 2"
+    ></button>
+    <button
+     type="button"
+     data-bs-target="#carouselExampleIndicators"
+     data-bs-slide-to="2"
+     aria-label="Slide 3"
+    ></button>
+
+    <button
+     type="button"
+     data-bs-target="#carouselExampleIndicators"
+     data-bs-slide-to="3"
+     aria-label="Slide 4"
+    ></button>
+
+    <button
+     type="button"
+     data-bs-target="#carouselExampleIndicators"
+     data-bs-slide-to="4"
+     aria-label="Slide 5"
+    ></button>
+
+    <button
+     type="button"
+     data-bs-target="#carouselExampleIndicators"
+     data-bs-slide-to="5"
+     aria-label="Slide 6"
+    ></button>
+
+    <button
+     type="button"
+     data-bs-target="#carouselExampleIndicators"
+     data-bs-slide-to="6"
+     aria-label="Slide 7"
+    ></button>
+
+    <button
+     type="button"
+     data-bs-target="#carouselExampleIndicators"
+     data-bs-slide-to="7"
+     aria-label="Slide 8"
+    ></button>
+
+    <button
+     type="button"
+     data-bs-target="#carouselExampleIndicators"
+     data-bs-slide-to="8"
+     aria-label="Slide 9"
+    ></button>
+
+    <button
+     type="button"
+     data-bs-target="#carouselExampleIndicators"
+     data-bs-slide-to="9"
+     aria-label="Slide 10"
+    ></button>
+   </div>
+
+   <div class="carousel-inner review-inner">
+    <div class="carousel-item review-item active">
+     <span>⭐️⭐️⭐️⭐️⭐️</span>
+     <p>
+      These sneakers are a timeless classic! They go with everything and are
+      super comfortable. I wear them for long walks, and my feet never feel
+      tired.
+     </p>
+    </div>
+
+    <div class="carousel-item review-item">
+     <span>⭐️⭐️⭐️⭐️</span>
+     <p>
+      Love the style, but they run slightly large. I recommend going half a size
+      down. Other than that, they're perfect for casual outings.
+     </p>
+    </div>
+
+    <div class="carousel-item review-item">
+     <span>⭐️⭐️⭐️⭐️⭐️</span>
+     <p>
+      These running shoes are a game-changer! The support is amazing, and they
+      feel like they were made just for my feet. Highly recommend for serious
+      runners.
+     </p>
+    </div>
+
+    <div class="carousel-item review-item">
+     <span>⭐️⭐️⭐️⭐️</span>
+     <p>
+      Great quality, but the color looks slightly different in person. It's not
+      a deal-breaker, though. These are still excellent shoes for my workouts.
+     </p>
+    </div>
+
+    <div class="carousel-item review-item">
+     <span>⭐️⭐️⭐️⭐️⭐️</span>
+     <p>
+      These dress shoes are top-notch! The leather is premium, and they're
+      incredibly comfortable. They're my go-to for formal events.
+     </p>
+    </div>
+
+    <div class="carousel-item review-item">
+     <span>⭐️⭐️⭐️⭐️</span>
+     <p>
+      Stylish and well-made. They took a few days to break in, but now they're
+      incredibly comfortable. I've received numerous compliments.
+     </p>
+    </div>
+
+    <div class="carousel-item review-item">
+     <span>⭐️⭐️⭐️⭐️</span>
+     <p>
+      My child loves these shoes! They're easy to put on, and the sole provides
+      great support. Plus, they look adorable.
+     </p>
+    </div>
+
+    <div class="carousel-item review-item">
+     <span>⭐️⭐️⭐️⭐️⭐️</span>
+     <p>
+      The sizing was accurate, and they're holding up well despite my active
+      kid's adventures. The design is cute, and they're easy to clean.
+     </p>
+    </div>
+
+    <div class="carousel-item review-item">
+     <span>⭐️⭐️⭐️⭐️⭐️</span>
+     <p>
+      These boots are a must-have for any hiker. They provide excellent ankle
+      support and keep my feet dry on wet trails. Extremely durable!.
+     </p>
+    </div>
+
+    <div class="carousel-item review-item">
+     <span>⭐️⭐️⭐️⭐️⭐️</span>
+     <p>
+      Comfortable and sturdy, but they run a bit narrow. If you have wider feet,
+      consider going up a size. Otherwise, they're fantastic for hikes.
+     </p>
+    </div>
+   </div>
+
+   <button
+    class="carousel-control-prev"
+    type="button"
+    data-bs-target="#carouselExampleIndicators"
+    data-bs-slide="prev"
+   >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+   </button>
+   <button
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#carouselExampleIndicators"
+    data-bs-slide="next"
+   >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+   </button>
+  </div>
+
+  <!-- FOOTER -->
+  <footer id="sections" class="footer hidden">
+   <div class="footer__top">
+    <div class="footer__top--left">
+     <h1>SoleandStitch</h1>
+
+     <div class="subscribe">
+      <p>Get a Touch with us</p>
+
+      <div class="subscribe__section">
+       <input type="text" placeholder="Enter your email" class="email" />
+       <button class="subscribe__section--btn">Let's Talk</button>
+      </div>
+     </div>
+    </div>
+
+    <div class="footer__top--right">
+     <ul>
+      <h5>Quick Menu</h5>
+
+      <li><a href="index.html">Home</a></li>
+      <li><a href="product.html">Products</a></li>
+      <li><a href="cart.html">Cart</a></li>
+     </ul>
+
+     <ul>
+      <h5>License</h5>
+
+      <li><a href="/">Privacy Policy</a></li>
+      <li><a href="/">Copyright</a></li>
+      <li><a href="/">Term and Condition</a></li>
+     </ul>
+
+     <ul>
+      <h5>Company</h5>
+
+      <li><a href="/">Privacy Policy</a></li>
+      <li><a href="/">Copyright</a></li>
+      <li><a href="/">Term and Condition</a></li>
+     </ul>
+    </div>
+   </div>
+
+   <div class="footer__bottom">
+    <p>Copyright &copy; 2023 SoleandStitch</p>
+
+    <div class="footer__bottom--left">
+     <a href="https://www.facebook.com/profile.php?id=100086586432588"
+      ><i class="fa-brands fa-facebook"></i
+     ></a>
+     <a href="https://www.linkedin.com/in/musa-abdulkabir-170836202/"
+      ><i class="fa-brands fa-linkedin"></i
+     ></a>
+     <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+    </div>
+   </div>
+  </footer>
+
+  <!-- BOOTSTRAP CDN -->
+  <script
+   src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+   integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+   crossorigin="anonymous"
+  ></script>
+  <script
+   src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+   integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+   crossorigin="anonymous"
+  ></script>
+
+  <!-- EMAILJS CDN -->
+  <script
+   type="text/javascript"
+   src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+  ></script>
+ </body>
 </html>

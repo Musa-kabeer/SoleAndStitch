@@ -3,7 +3,628 @@
  <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Product</title>
+
+  <!-- BOOTSRAP -->
+  <link
+   rel="stylesheet"
+   href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+  />
+
+  <!-- FONT AWESOME -->
+  <link
+   rel="stylesheet"
+   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+  />
+
+  <!-- <link rel="stylesheet" href="src/css/index.scss" /> -->
+  <link rel="stylesheet" href="src/css/product.scss" />
+  <script
+   data-main="./src/scripts/index.js"
+   src="./src/scripts/require.js"
+  ></script>
+  <script defer src="./src/scripts/index.js" type="module"></script>
+
+  <title>Sole And Stitch</title>
  </head>
- <body></body>
+ <body>
+  <!-- HEADER -->
+  <header id="sections" class="hidden">
+   <nav>
+    <h1>SoleandStitch</h1>
+
+    <ul>
+     <li><a class="nav_links" data-link="home" href="index.html">Home</a></li>
+     <li>
+      <a class="nav_links" data-link="products" href="product.html">Products</a>
+     </li>
+     <li><a class="nav_links" data-link="cart" href="cart.html">Cart</a></li>
+    </ul>
+
+    <button class="cta-btn">
+     shop now <i class="fa-solid fa-cart-shopping fa-xs"></i>
+    </button>
+   </nav>
+
+   <div class="hero-container">
+    <video autoplay muted loop>
+     <source src="./src/images/product-hero.mp4" type="video/mp4" />
+    </video>
+
+    <div class="overlay">
+     <h2>Grab Upto 50% off on Selected Sneakers</h2>
+     <p>
+      Welcome to our exclusive footwear boutique, where style meets comfort.
+      Discover a curated collection of the latest trends in shoes, meticulously
+      crafted for the modern individual. From casual kicks to elegant heels, our
+      range is designed to elevate your every step. Explore a world of quality
+      craftsmanship and timeless designs, tailored to suit your unique taste.
+      Step into the future of footwear fashion with us.
+     </p>
+     <span>
+      <button class="overlay-cta">Buy now</button>
+     </span>
+    </div>
+   </div>
+  </header>
+
+  <!-- PRODUCTS -->
+  <div class="products hidden" id="sections">
+   <div class="products__header">
+    <h2>Sneakers For You!</h2>
+    <select class="products__header--select">
+     <option value="sneaker">Sneakers</option>
+     <option value="boot">Boots</option>
+     <option value="sandal">Sandals</option>
+     <option value="loafer">Loafers</option>
+     <option value="heel">Heel</option>
+    </select>
+   </div>
+
+   <div class="products__lists">
+    <!-- PRODUCT -->
+    <div class="products__lists--product">
+     <div class="products__lists--product--top">
+      <img src="./src/images/hero__image--5.jpg" alt="" />
+      <i class="fa-regular fa-heart active-heart"></i>
+
+      <i class="fa-solid fa-heart active-heart-onClick heart-hidden"></i>
+     </div>
+
+     <div class="products__lists--product--bottom">
+      <div>
+       <h3>NIKE</h3>
+
+       <div class="ratings">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+
+        <span>(21)</span>
+       </div>
+
+       <button class="product__list--cta-add">Add to cart</button>
+      </div>
+
+      <div
+       style="
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+       "
+      >
+       <h2>$3000</h2>
+       <button class="product__list--cta-buy">Buy Now</button>
+      </div>
+     </div>
+    </div>
+
+    <!-- PRODUCT -->
+    <div class="products__lists--product">
+     <div class="products__lists--product--top">
+      <img src="./src/images/hero__image--5.jpg" alt="" />
+      <i class="fa-regular fa-heart active-heart"></i>
+
+      <i class="fa-solid fa-heart active-heart-onClick heart-hidden"></i>
+     </div>
+
+     <div class="products__lists--product--bottom">
+      <div>
+       <h3>NIKE</h3>
+
+       <div class="ratings">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+
+        <span>(21)</span>
+       </div>
+
+       <button class="product__list--cta-add">Add to cart</button>
+      </div>
+
+      <div
+       style="
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+       "
+      >
+       <h2>$3000</h2>
+       <button class="product__list--cta-buy">Buy Now</button>
+      </div>
+     </div>
+    </div>
+
+    <!-- PRODUCT -->
+    <div class="products__lists--product">
+     <div class="products__lists--product--top">
+      <img src="./src/images/hero__image--5.jpg" alt="" />
+      <i class="fa-regular fa-heart active-heart"></i>
+
+      <i class="fa-solid fa-heart active-heart-onClick heart-hidden"></i>
+     </div>
+
+     <div class="products__lists--product--bottom">
+      <div>
+       <h3>NIKE</h3>
+
+       <div class="ratings">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+
+        <span>(21)</span>
+       </div>
+
+       <button class="product__list--cta-add">Add to cart</button>
+      </div>
+
+      <div
+       style="
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+       "
+      >
+       <h2>$3000</h2>
+       <button class="product__list--cta-buy">Buy Now</button>
+      </div>
+     </div>
+    </div>
+
+    <!-- PRODUCT -->
+    <div class="products__lists--product">
+     <div class="products__lists--product--top">
+      <img src="./src/images/hero__image--5.jpg" alt="" />
+      <i class="fa-regular fa-heart active-heart"></i>
+
+      <i class="fa-solid fa-heart active-heart-onClick heart-hidden"></i>
+     </div>
+
+     <div class="products__lists--product--bottom">
+      <div>
+       <h3>NIKE</h3>
+
+       <div class="ratings">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+
+        <span>(21)</span>
+       </div>
+
+       <button class="product__list--cta-add">Add to cart</button>
+      </div>
+
+      <div
+       style="
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+       "
+      >
+       <h2>$3000</h2>
+       <button class="product__list--cta-buy">Buy Now</button>
+      </div>
+     </div>
+    </div>
+
+    <!-- PRODUCT -->
+    <div class="products__lists--product">
+     <div class="products__lists--product--top">
+      <img src="./src/images/hero__image--5.jpg" alt="" />
+      <i class="fa-regular fa-heart active-heart"></i>
+
+      <i class="fa-solid fa-heart active-heart-onClick heart-hidden"></i>
+     </div>
+
+     <div class="products__lists--product--bottom">
+      <div>
+       <h3>NIKE</h3>
+
+       <div class="ratings">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+
+        <span>(21)</span>
+       </div>
+
+       <button class="product__list--cta-add">Add to cart</button>
+      </div>
+
+      <div
+       style="
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+       "
+      >
+       <h2>$3000</h2>
+       <button class="product__list--cta-buy">Buy Now</button>
+      </div>
+     </div>
+    </div>
+
+    <!-- PRODUCT -->
+    <div class="products__lists--product">
+     <div class="products__lists--product--top">
+      <img src="./src/images/hero__image--5.jpg" alt="" />
+      <i class="fa-regular fa-heart active-heart"></i>
+
+      <i class="fa-solid fa-heart active-heart-onClick heart-hidden"></i>
+     </div>
+
+     <div class="products__lists--product--bottom">
+      <div>
+       <h3>NIKE</h3>
+
+       <div class="ratings">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+
+        <span>(21)</span>
+       </div>
+
+       <button class="product__list--cta-add">Add to cart</button>
+      </div>
+
+      <div
+       style="
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+       "
+      >
+       <h2>$3000</h2>
+       <button class="product__list--cta-buy">Buy Now</button>
+      </div>
+     </div>
+    </div>
+
+    <!-- PRODUCT -->
+    <div class="products__lists--product">
+     <div class="products__lists--product--top">
+      <img src="./src/images/hero__image--5.jpg" alt="" />
+      <i class="fa-regular fa-heart active-heart"></i>
+
+      <i class="fa-solid fa-heart active-heart-onClick heart-hidden"></i>
+     </div>
+
+     <div class="products__lists--product--bottom">
+      <div>
+       <h3>NIKE</h3>
+
+       <div class="ratings">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+
+        <span>(21)</span>
+       </div>
+
+       <button class="product__list--cta-add">Add to cart</button>
+      </div>
+
+      <div
+       style="
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+       "
+      >
+       <h2>$3000</h2>
+       <button class="product__list--cta-buy">Buy Now</button>
+      </div>
+     </div>
+    </div>
+
+    <!-- PRODUCT -->
+    <div class="products__lists--product">
+     <div class="products__lists--product--top">
+      <img src="./src/images/hero__image--5.jpg" alt="" />
+      <i class="fa-regular fa-heart active-heart"></i>
+
+      <i class="fa-solid fa-heart active-heart-onClick heart-hidden"></i>
+     </div>
+
+     <div class="products__lists--product--bottom">
+      <div>
+       <h3>NIKE</h3>
+
+       <div class="ratings">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+
+        <span>(21)</span>
+       </div>
+
+       <button class="product__list--cta-add">Add to cart</button>
+      </div>
+
+      <div
+       style="
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+       "
+      >
+       <h2>$3000</h2>
+       <button class="product__list--cta-buy">Buy Now</button>
+      </div>
+     </div>
+    </div>
+
+    <!-- PRODUCT -->
+    <div class="products__lists--product">
+     <div class="products__lists--product--top">
+      <img src="./src/images/hero__image--5.jpg" alt="" />
+      <i class="fa-regular fa-heart active-heart"></i>
+
+      <i class="fa-solid fa-heart active-heart-onClick heart-hidden"></i>
+     </div>
+
+     <div class="products__lists--product--bottom">
+      <div>
+       <h3>NIKE</h3>
+
+       <div class="ratings">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+
+        <span>(21)</span>
+       </div>
+
+       <button class="product__list--cta-add">Add to cart</button>
+      </div>
+
+      <div
+       style="
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+       "
+      >
+       <h2>$3000</h2>
+       <button class="product__list--cta-buy">Buy Now</button>
+      </div>
+     </div>
+    </div>
+
+    <!-- PRODUCT -->
+    <div class="products__lists--product">
+     <div class="products__lists--product--top">
+      <img src="./src/images/hero__image--5.jpg" alt="" />
+      <i class="fa-regular fa-heart active-heart"></i>
+
+      <i class="fa-solid fa-heart active-heart-onClick heart-hidden"></i>
+     </div>
+
+     <div class="products__lists--product--bottom">
+      <div>
+       <h3>NIKE</h3>
+
+       <div class="ratings">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+
+        <span>(21)</span>
+       </div>
+
+       <button class="product__list--cta-add">Add to cart</button>
+      </div>
+
+      <div
+       style="
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+       "
+      >
+       <h2>$3000</h2>
+       <button class="product__list--cta-buy">Buy Now</button>
+      </div>
+     </div>
+    </div>
+
+    <!-- PRODUCT -->
+    <div class="products__lists--product">
+     <div class="products__lists--product--top">
+      <img src="./src/images/hero__image--5.jpg" alt="" />
+      <i class="fa-regular fa-heart active-heart"></i>
+
+      <i class="fa-solid fa-heart active-heart-onClick heart-hidden"></i>
+     </div>
+
+     <div class="products__lists--product--bottom">
+      <div>
+       <h3>NIKE</h3>
+
+       <div class="ratings">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+
+        <span>(21)</span>
+       </div>
+
+       <button class="product__list--cta-add">Add to cart</button>
+      </div>
+
+      <div
+       style="
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+       "
+      >
+       <h2>$3000</h2>
+       <button class="product__list--cta-buy">Buy Now</button>
+      </div>
+     </div>
+    </div>
+
+    <!-- PRODUCT -->
+    <div class="products__lists--product">
+     <div class="products__lists--product--top">
+      <img src="./src/images/hero__image--5.jpg" alt="" />
+      <i class="fa-regular fa-heart active-heart"></i>
+
+      <i class="fa-solid fa-heart active-heart-onClick heart-hidden"></i>
+     </div>
+
+     <div class="products__lists--product--bottom">
+      <div>
+       <h3>NIKE</h3>
+
+       <div class="ratings">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+
+        <span>(21)</span>
+       </div>
+
+       <button class="product__list--cta-add">Add to cart</button>
+      </div>
+
+      <div
+       style="
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+       "
+      >
+       <h2>$3000</h2>
+       <button class="product__list--cta-buy">Buy Now</button>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer id="sections" class="footer hidden">
+   <div class="footer__top">
+    <div class="footer__top--left">
+     <h1>SoleandStitch</h1>
+
+     <div class="subscribe">
+      <p>Get a Touch with us</p>
+
+      <div class="subscribe__section">
+       <input type="text" placeholder="Enter your email" class="email" />
+       <button class="subscribe__section--btn">Let's Talk</button>
+      </div>
+     </div>
+    </div>
+
+    <div class="footer__top--right">
+     <ul>
+      <h5>Quick Menu</h5>
+
+      <li><a href="index.html">Home</a></li>
+      <li><a href="product.html">Products</a></li>
+      <li><a href="cart.html">Cart</a></li>
+     </ul>
+
+     <ul>
+      <h5>License</h5>
+
+      <li><a href="/">Privacy Policy</a></li>
+      <li><a href="/">Copyright</a></li>
+      <li><a href="/">Term and Condition</a></li>
+     </ul>
+
+     <ul>
+      <h5>Company</h5>
+
+      <li><a href="/">Privacy Policy</a></li>
+      <li><a href="/">Copyright</a></li>
+      <li><a href="/">Term and Condition</a></li>
+     </ul>
+    </div>
+   </div>
+
+   <div class="footer__bottom">
+    <p>Copyright &copy; 2023 SoleandStitch</p>
+
+    <div class="footer__bottom--left">
+     <a href="https://www.facebook.com/profile.php?id=100086586432588"
+      ><i class="fa-brands fa-facebook"></i
+     ></a>
+     <a href="https://www.linkedin.com/in/musa-abdulkabir-170836202/"
+      ><i class="fa-brands fa-linkedin"></i
+     ></a>
+     <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+    </div>
+   </div>
+  </footer>
+
+  <!-- BOOTSTRAP CDN -->
+  <script
+   src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+   integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+   crossorigin="anonymous"
+  ></script>
+  <script
+   src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+   integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+   crossorigin="anonymous"
+  ></script>
+
+  <!-- EMAILJS CDN -->
+  <script
+   type="text/javascript"
+   src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+  ></script>
+ </body>
 </html>
