@@ -3,7 +3,8 @@
  "version": "1.0.0",
  "description": "INTRO-CONPONENT",
  "scripts": {
-  "start": "parcel /*.html"
+  "start": "parcel /*.html",
+  "build": "parcel build /*.html"
  },
  "author": "AFRICANTECHI",
  "license": "ISC",
