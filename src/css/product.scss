@@ -166,6 +166,7 @@ header {
   grid-row-gap: 13px;
 
   &--product {
+   height: 450px;
    border-radius: 4px;
    background-color: #c6c6c6ba;
 
@@ -227,6 +228,7 @@ header {
    }
 
    &--bottom {
+    height: 150px;
     font-size: 12px;
     padding: 8px 6px;
     display: flex;
@@ -238,11 +240,11 @@ header {
      justify-content: space-between;
 
      h3 {
-      font-size: 18px;
+      font-size: 16px;
      }
 
      h2 {
-      font-size: 18px;
+      font-size: 15px;
       font-weight: 600;
       //  align-self: flex-end;
      }

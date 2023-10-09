@@ -1,5 +1,9 @@
+'use strict';
 const productsContainer = document.querySelector('.products__lists');
 const filterProduct = document.querySelector('.products__header--select');
+
+// GLOBAL VARIABLE
+let localProduct;
 
 const products = [
  {
@@ -211,14 +215,22 @@ const displayProducts = (products) => {
  productsContainer.innerHTML = '';
 
  products.forEach((product, i) => {
+  localProduct = JSON.parse(localStorage.getItem('soleandstitch--products'));
+
+  const get = localProduct.find((local) => local.id === product.id);
+
   const markup = `
     <div class="products__lists--product" data-position="${product.id}">
      <div class="products__lists--product--top">
       <img src="${product.image}" alt="${product.name}"  />
-      <i class="fa-regular fa-heart active-heart"></i>
-
-      <i class="fa-solid fa-heart active-heart-onClick heart-hidden"></i>
-     </div>
+       <div class="heart">
+       <i class="fa-regular fa-heart active-heart"></i>
+      
+       <i class="fa-solid fa-heart active-heart-onClick ${
+        get?.id === product.id ? '' : 'heart-hidden'
+       }"></i>
+       </div>
+      </div>
 
      <div class="products__lists--product--bottom">
       <div class="products__lists--product--bottom--top">
@@ -251,3 +263,46 @@ const displayProducts = (products) => {
 };
 
 displayProducts(products);
+
+// ON DOM FULLY LOADED EVENT
+document.addEventListener('DOMContentLoaded', () => {
+ const heart = document.querySelectorAll('.heart');
+
+ heart.forEach((h) =>
+  h.addEventListener('click', (e) => {
+   const target = e.target;
+   const productEl = target.closest('.products__lists--product');
+   localProduct = JSON.parse(localStorage.getItem('soleandstitch--products'));
+
+   const check = target.classList.contains('active-heart');
+
+   if (check) {
+    //  1) REMOVE HIDDEN CLASS
+    target.nextElementSibling.classList.remove('heart-hidden');
+
+    //  2) ADD TO LOCAL STORAGE
+    const product = products.find(
+     (product) => product.id === +productEl.dataset.position
+    );
+
+    //  3) SET NEW LIKE TO LOCAL STORAGE
+    const newLike = localProduct ? [...localProduct, product] : [product];
+    localStorage.setItem('soleandstitch--products', JSON.stringify(newLike));
+   }
+
+   if (!check) {
+    // 1) REMOVE ACTIVE STYLING
+    target.classList.add('heart-hidden');
+
+    //  2) ADD TO LOCAL STORAGE
+    const product = products.find(
+     (product) => product.id === +productEl.dataset.position
+    );
+
+    //  3) SET NEW LIKE TO LOCAL STORAGE
+    const newLike = localProduct.filter((local) => local.id !== product.id);
+    localStorage.setItem('soleandstitch--products', JSON.stringify(newLike));
+   }
+  })
+ );
+});

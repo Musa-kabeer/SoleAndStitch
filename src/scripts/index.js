@@ -33,10 +33,10 @@ const sendEmail = async (email) => {
  };
 
  emailjs.send('service_d68r5rr', 'template_rdm9ilf', templateParams).then(
-  (res) => {
+  () => {
    alert('Email sent');
   },
-  (err) => {
+  () => {
    alert('Network error, Please try again later.');
   }
  );
