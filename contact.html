@@ -20,10 +20,10 @@
    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
   />
 
-  <link rel="stylesheet" href="src/css/product.scss" />
+  <link rel="stylesheet" href="src/css/contact.scss" />
 
   <script defer src="./src/scripts/index.js"></script>
-  <script defer src="./src/scripts/products.js"></script>
+  <script defer src="./src/scripts/contact.js"></script>
 
   <title>Sole And Stitch</title>
  </head>
@@ -39,64 +39,89 @@
       <a class="nav_links" data-link="products" href="product.html">Products</a>
      </li>
      <li>
-      <a class="nav_links" data-link="contact" href="contact.html">Contact</a>
+      <a class="nav_links" data-link="contact" href="contact.html">Contacts</a>
      </li>
     </ul>
 
-    <button class="cta-btn">
-     shop now <i class="fa-solid fa-cart-shopping fa-xs"></i>
-    </button>
+    <button class="cta-btn">shop now</button>
    </nav>
 
    <div class="hero-container">
-    <video autoplay muted loop>
-     <source src="./src/images/product-hero.mp4" type="video/mp4" />
-    </video>
+    <img src="./src/images/contact-us.jpg" alt="" />
 
     <div class="overlay">
-     <h2>Grab Upto 50% off on Selected Sneakers</h2>
-     <p>
-      Welcome to our exclusive footwear boutique, where style meets comfort.
-      Discover a curated collection of the latest trends in shoes, meticulously
-      crafted for the modern individual. From casual kicks to elegant heels, our
-      range is designed to elevate your every step. Explore a world of quality
-      craftsmanship and timeless designs, tailored to suit your unique taste.
-      Step into the future of footwear fashion with us.
-     </p>
-     <span>
-      <button class="overlay-cta">Buy now</button>
-     </span>
+     <h2>Contact Us</h2>
     </div>
    </div>
   </header>
 
-  <!-- PRODUCTS -->
-  <div class="products hidden" id="sections">
-   <div class="products__header">
-    <h2>Sneakers For You!</h2>
+  <!--  CONTACT -->
+  <div class="contact" id="sections">
+   <div class="contact__left">
+    <span class="contact__left--logo">🧵</span>
+    <h3>You can contact us directly:</h3>
 
-    <select class="products__header--select">
-     <option value="">All products</option>
-     <option value="sneakers">Sneakers</option>
-     <option value="boots">Boots</option>
-     <option value="sandals">Sandals</option>
-     <option value="loafers">Loafers</option>
-     <option value="heels">Heel</option>
-    </select>
+    <a href="mailto:contactstitchandsole@gmail.com"
+     >contactstitchandsole@gmail.com</a
+    >
+
+    <p>
+     Or you can write us via the contact form. We answer as quick as possible.
+    </p>
+
+    <div class="contact__left--icons">
+     <a href="https://www.facebook.com/profile.php?id=100086586432588"
+      ><i class="fa-brands fa-facebook"></i
+     ></a>
+     <a href="https://www.linkedin.com/in/musa-abdulkabir-170836202/"
+      ><i class="fa-brands fa-linkedin"></i
+     ></a>
+     <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+    </div>
    </div>
 
-   <!-- LISTS OF PRODUCTS -->
-   <div class="products__lists"></div>
-  </div>
+   <div class="contact__right">
+    <h1>Contact Us</h1>
 
-  <div class="support" id="sections">
-   <h2>Customer Satisfaction Guarantee</h2>
-   <p>
-    At Soleandsale, we are committed to providing you with high-quality products
-    and an exceptional shopping experience. If for any reason you are not
-    satisfied with your purchase, please don't hesitate to contact our customer
-    support team. We'll do our best to make it right.
-   </p>
+    <form
+     enctype="multipart/form-data"
+     action="POST"
+     class="contact__right--form"
+    >
+     <div class="input--container">
+      <input
+       type="text"
+       id="fullname"
+       class="fullname"
+       placeholder="Your Full Name"
+      />
+      <span class="form-error form-error-fullname hidden"></span>
+     </div>
+
+     <div class="input--container">
+      <input type="email" id="email" class="email" placeholder="Email" />
+      <span class="form-error form-error-email hidden"></span>
+     </div>
+
+     <div class="input--container">
+      <input type="text" id="subject" class="subject" placeholder="Subject" />
+      <span class="form-error form-error-subject hidden"></span>
+     </div>
+
+     <div class="input--container">
+      <textarea
+       id="message"
+       cols="30"
+       rows="10"
+       class="message"
+       placeholder="Write Something ..."
+      ></textarea>
+      <span class="form-error form-error-message hidden"></span>
+     </div>
+
+     <button class="sendForm-message">Send Message</button>
+    </form>
+   </div>
   </div>
 
   <!-- FOOTER -->

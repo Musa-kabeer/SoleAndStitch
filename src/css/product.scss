@@ -92,7 +92,6 @@ header {
    position: absolute;
    width: 100%;
    height: 100%;
-   position: absolute;
    z-index: 1;
   }
 
@@ -155,6 +154,7 @@ header {
    border-radius: 4px;
    border: 1px solid #a3a1a11b;
    outline: none;
+   font-size: 14px;
   }
  }
 
@@ -179,6 +179,7 @@ header {
      height: 100%;
      border-top-left-radius: 4px;
      border-top-right-radius: 4px;
+     object-fit: cover;
     }
 
     .active-heart {
@@ -229,11 +230,21 @@ header {
     font-size: 12px;
     padding: 8px 6px;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
 
-    > div {
+    &--top {
+     display: flex;
+     justify-content: space-between;
+
      h3 {
       font-size: 18px;
+     }
+
+     h2 {
+      font-size: 18px;
+      font-weight: 600;
+      //  align-self: flex-end;
      }
 
      .ratings {
@@ -245,6 +256,11 @@ header {
        color: orange;
       }
      }
+    }
+
+    &--bottom {
+     display: flex;
+     justify-content: space-between;
 
      .product__list--cta-add {
       width: 90px;
@@ -259,30 +275,49 @@ header {
        background: #ab3d39bc;
       }
      }
-    }
 
-    h2 {
-     font-size: 18px;
-     font-weight: 800;
-     align-self: flex-end;
-    }
+     .product__list--cta-buy {
+      width: 90px;
+      height: 30px;
+      background: #ee4b45bc;
+      border-radius: 5px;
+      font-size: 13px;
+      margin-top: 10px;
+      transition: all 0.4s ease-in-out;
+      align-self: flex-end;
 
-    .product__list--cta-buy {
-     width: 90px;
-     height: 30px;
-     background: #ee4b45bc;
-     border-radius: 5px;
-     font-size: 13px;
-     margin-top: 10px;
-     transition: all 0.4s ease-in-out;
-     align-self: flex-end;
-
-     &:hover {
-      background: #ab3d39bc;
+      &:hover {
+       background: #ab3d39bc;
+      }
      }
     }
    }
   }
+ }
+}
+
+.support {
+ width: 80%;
+ margin: 3rem auto;
+ border-radius: 6px;
+ background-color: #8080804a;
+ padding: 2.5rem 4rem;
+
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ gap: 16px;
+
+ h2 {
+  text-shadow: 2px 3px 3px #efadad8d;
+  font-size: 30px;
+  font-weight: 700;
+  color: rgb(46, 43, 43);
+ }
+
+ p {
+  font-size: 14px;
  }
 }
 
