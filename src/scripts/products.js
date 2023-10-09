@@ -251,7 +251,7 @@ const displayProducts = (products) => {
       </div>
 
       <div class="products__lists--product--bottom--bottom">
-       <button class="product__list--cta-add">Add to cart</button>
+       <button class="product__list--cta-add add_cart">Add to cart</button>
        <button class="product__list--cta-buy">Buy Now</button>
       </div>
      </div>
@@ -264,8 +264,14 @@ const displayProducts = (products) => {
 
 displayProducts(products);
 
-// ON DOM FULLY LOADED EVENT
+// ON DOM FULLY LOADED
 document.addEventListener('DOMContentLoaded', () => {
+ addToCart();
+ likeProduct();
+});
+
+// LIKE AND DISLIKE
+const likeProduct = () => {
  const heart = document.querySelectorAll('.heart');
 
  heart.forEach((h) =>
@@ -305,4 +311,30 @@ document.addEventListener('DOMContentLoaded', () => {
    }
   })
  );
-});
+};
+
+// ADD TO CART
+const addToCart = () => {
+ const addToCartBtn = [...document.querySelectorAll('.add_cart')];
+
+ addToCartBtn.forEach((btn) =>
+  btn.addEventListener('click', (e) => {
+   const position = e.target.closest('.products__lists--product').dataset
+    .position;
+
+   const product = products.find((product) => product.id === +position);
+
+   const ls = JSON.parse(localStorage.getItem('soleandstitch--carts'));
+
+   const currentCart = ls ? ls : [];
+
+   const cart = [...currentCart, product];
+
+   //  UPDATE CART DOM
+   document.querySelector('.cart__button--value').textContent = cart.length;
+
+   //  UPDATE LOCAL STORAGE
+   localStorage.setItem('soleandstitch--carts', JSON.stringify(cart));
+  })
+ );
+};

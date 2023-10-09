@@ -47,3 +47,14 @@ sendEmailBtn.addEventListener('click', () => {
 
  sendEmail(email);
 });
+
+// GET ALL CARTS
+const getCarts = () => {
+ const carts = JSON.parse(localStorage.getItem('soleandstitch--carts'));
+
+ document.querySelector('.cart__button--value').textContent = carts
+  ? carts.length
+  : 0;
+};
+
+getCarts();

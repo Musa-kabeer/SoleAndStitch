@@ -30,7 +30,7 @@
   <!-- HEADER -->
   <header id="sections" class="hidden">
    <nav>
-    <h1>SoleandStitch</h1>
+    <a href="index.html" class="logo">SoleandStitch</a>
 
     <ul>
      <li><a class="nav_links" data-link="home" href="index.html">Home</a></li>
@@ -42,9 +42,14 @@
      </li>
     </ul>
 
-    <button class="cta-btn">
-     shop now <i class="fa-solid fa-cart-shopping fa-xs"></i>
-    </button>
+    <a href="index.html" class="cart">
+     <div class="cart__button">
+      <i class="fa-solid fa-cart-shopping fa-xs"></i>
+      <span class="cart__button--value"></span>
+     </div>
+
+     <button class="cta-btn">shop now</button>
+    </a>
    </nav>
 
    <div class="hero-container">
@@ -100,8 +105,6 @@
      <img src="/src/images/arrival_1.jpg" alt="Arrivals" />
      <div class="arrival_collection--overview">
       <span>NIKE</span>
-
-      <button>Add to cart</button>
      </div>
     </div>
 
@@ -109,8 +112,6 @@
      <img src="/src/images/arrival_9.jpg" alt="Arrivals" />
      <div class="arrival_collection--overview">
       <span>Timberland</span>
-
-      <button>Add to cart</button>
      </div>
     </div>
 
@@ -118,8 +119,6 @@
      <img src="/src/images/arrival_2.jpg" alt="Arrivals" />
      <div class="arrival_collection--overview">
       <span>UNDER ARMOUR</span>
-
-      <button>Add to cart</button>
      </div>
     </div>
 
@@ -127,8 +126,6 @@
      <img src="/src/images/arrival_3.jpg" alt="Arrivals" />
      <div class="arrival_collection--overview">
       <span>FILA</span>
-
-      <button>Add to cart</button>
      </div>
     </div>
 
@@ -136,8 +133,6 @@
      <img src="/src/images/arrival_4.jpg" alt="Arrivals" />
      <div class="arrival_collection--overview">
       <span>REEBOK</span>
-
-      <button>Add to cart</button>
      </div>
     </div>
 
@@ -145,8 +140,6 @@
      <img src="/src/images/arrival_5.jpg" alt="Arrivals" />
      <div class="arrival_collection--overview">
       <span>ASICS</span>
-
-      <button>Add to cart</button>
      </div>
     </div>
 
@@ -154,8 +147,6 @@
      <img src="/src/images/arrival_6.jpg" alt="Arrivals" />
      <div class="arrival_collection--overview">
       <span>CLARKS</span>
-
-      <button>Add to cart</button>
      </div>
     </div>
 
@@ -163,8 +154,6 @@
      <img src="/src/images/arrival_7.jpg" alt="Arrivals" />
      <div class="arrival_collection--overview">
       <span>New Balance</span>
-
-      <button>Add to cart</button>
      </div>
     </div>
 
@@ -172,8 +161,6 @@
      <img src="/src/images/arrival_8.jpg" alt="Arrivals" />
      <div class="arrival_collection--overview">
       <span>Adidas</span>
-
-      <button>Add to cart</button>
      </div>
     </div>
    </div>
@@ -207,9 +194,9 @@
 
   <!-- REVIEWS CAUROSEL -->
   <div
-   id="sections"
    id="carouselExampleIndicators"
-   class="carousel slide review hidden"
+   id="sections"
+   class="carousel slide review"
   >
    <div class="carousel-indicators">
     <button
