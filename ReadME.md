@@ -19,6 +19,7 @@
 
 - **_FORM:_** Nice looking form that uses [emailjs](https://www.emailjs.com/) restful API for sending form data to soleandstitch email 😚.
 
-- **_JS DATASET:_** For handling DOM elements, which is known for read-only property of the HTMLElement
+- **_JS DATASET:_** For handling DOM elements, which is known for read-only property of the HTMLElement.
 
-- **_JS LOCALSTORAGE:_** For storing data on browser and retrieve it when needed
+- **_JS LOCALSTORAGE:_** For storing data on browser and retrieve it when needed.
+- **_INSTANT ADD TO CART EFFECT:_** Updating DOM instantly after adding to cart.
